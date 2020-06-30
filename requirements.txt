@@ -1,0 +1,4 @@
+django-configurations
+django-cors-headers
+django-webpack-loader
+setuptools

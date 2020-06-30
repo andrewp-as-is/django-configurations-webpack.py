@@ -1,15 +1,7 @@
-from setuptools import setup
+import setuptools
 
-setup(
+setuptools.setup(
     name='django-configurations-webpack',
-    version='2020.5.26',
-    install_requires=[
-        'django-configurations',
-        'django-cors-headers',
-        'django-webpack-loader',
-        'setuptools',
-    ],
-    packages=[
-        'django_configurations_webpack',
-    ],
+    install_requires=open('requirements.txt').read().splitlines(),
+    packages=setuptools.find_packages()
 )

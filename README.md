@@ -1,13 +1,13 @@
 <!--
-https://pypi.org/project/readme-generator/
-https://pypi.org/project/python-readme-generator/
+https://readme42.com
 -->
+
 
 [![](https://img.shields.io/pypi/v/django-configurations-webpack.svg?maxAge=3600)](https://pypi.org/project/django-configurations-webpack/)
 [![](https://img.shields.io/badge/License-Unlicense-blue.svg?longCache=True)](https://unlicense.org/)
-[![Travis](https://api.travis-ci.org/andrewp-as-is/django-configurations-webpack.py.svg?branch=master)](https://travis-ci.org/andrewp-as-is/django-configurations-webpack.py/)
+[![](https://github.com/andrewp-as-is/django-configurations-webpack.py/workflows/tests42/badge.svg)](https://github.com/andrewp-as-is/django-configurations-webpack.py/actions)
 
-#### Installation
+### Installation
 ```bash
 $ [sudo] pip install django-configurations-webpack
 ```
@@ -23,10 +23,10 @@ DJANGO_WEBPACK_STATS_FILE=./webpack-stats-prod.json # optional
 from django_configurations_webpack import WebpackDevConfiguration, WebpackProdConfiguration
 
 class Dev(WebpackDevConfiguration,...):
-    ...
+    ... # WEBPACK_STATS_FILE ./webpack-stats.json by default
 
 class Prod(WebpackProdConfiguration,...):
-    ...
+    ... # WEBPACK_STATS_FILE ./webpack-stats-prod.json by default
 ```
 
 `webpack.config.js`
@@ -68,5 +68,5 @@ class Prod(WebpackProdConfiguration,...):
 +   [django-webpack-loader](https://github.com/owais/django-webpack-loader)
 
 <p align="center">
-    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
+    <a href="https://readme42.com/">readme42.com</a>
 </p>
