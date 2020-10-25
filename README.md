@@ -12,22 +12,19 @@ https://readme42.com
 $ [sudo] pip install django-configurations-webpack
 ```
 
-##### `.env`
-```bash
-DJANGO_WEBPACK_STATS_FILE=./webpack-stats-prod.json # optional
-```
-
 #### Examples
 `settings.py`
 ```python
-from django_configurations_webpack import WebpackDevConfiguration, WebpackProdConfiguration
+from configurations import Configuration
+from django_configurations_webpack import WebpackDevMixin, WebpackProdMixin
 
-class Dev(WebpackDevConfiguration,...):
+class Dev(WebpackDevMixin,Configuration):
     ... # WEBPACK_STATS_FILE ./webpack-stats.json by default
 
-class Prod(WebpackProdConfiguration,...):
+class Prod(WebpackProdMixin,Configuration):
     ... # WEBPACK_STATS_FILE ./webpack-stats-prod.json by default
 ```
+
 
 `webpack.config.js`
 ```js
@@ -55,12 +52,6 @@ template
 ...
 {% render_bundle 'main' 'js' %}
 </body>
-```
-
-customize
-```python
-class Prod(WebpackProdConfiguration,...):
-    WEBPACK_STATS_FILE = './webpack-stats-custom.json'
 ```
 
 #### Links
